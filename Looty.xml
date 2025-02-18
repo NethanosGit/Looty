@@ -1,0 +1,17 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+    <Font name="PlumberLootUIFont" inherits="GameFontNormal" virtual="true">
+        <Color r="1" g="1" b="1" />
+        <Shadow>
+            <Offset>
+                <AbsDimension x="1" y="-1" />
+            </Offset>
+        </Shadow>
+    </Font>
+    <Script file="Looty_Display.lua" />
+    <Frame name="PlumberLootUIIconTemplate" virtual="true">
+        <Size x="32" y="32" />
+        <Layers>
+            <Layer level="" />
+        </Layers>
+    </Frame>
+</Ui>

@@ -1,0 +1,7 @@
+## Interface: 30300
+## Version: Alpha
+## Title: Looty
+## Notes: Provites a new UI for looting window
+## Author: Nethanos
+Looty.lua
+Looty.xml
