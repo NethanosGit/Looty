@@ -1,5 +1,5 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
-    <Font name="PlumberLootUIFont" inherits="GameFontNormal" virtual="true">
+    <Font name="LootyFont" inherits="GameFontNormal" virtual="true">
         <Color r="1" g="1" b="1" />
         <Shadow>
             <Offset>
@@ -7,11 +7,32 @@
             </Offset>
         </Shadow>
     </Font>
-    <Script file="Looty_Display.lua" />
-    <Frame name="PlumberLootUIIconTemplate" virtual="true">
+    <Frame name="LootyIconTemplate" virtual="true">
         <Size x="32" y="32" />
         <Layers>
-            <Layer level="" />
+            <Layer level="BACKGROUND" frameLevel="0">
+                <Texture parentKey="Icon" setAllPoints="true" />
+            </Layer>
+            <Layer level="BORDER" frameLevel="1">
+                <Texture parentKey="Border" setAllPoints="true" file="Interface\Addons\Looty\Art\IconBorder-Square.tga">
+                    <Size x="32" y="32" />
+                </Texture>
+            </Layer>
+            <Layer level="ARTWORK" frameLevel="2">
+                <Texture parentKey="IconOverlay" hidden="true">
+                    <Size x="64" y="64" />
+                    <Anchors>
+                        <Anchor point="CENTER" />
+                    </Anchors>
+                </Texture>
+            </Layer>
+            <Layer level="OVERLAY" frameLevel="3">
+                <FontString parentKey="Count" inherits="NumberFontNormal" justifyH="RIGHT" justifyV="BOTTOM">
+                    <Anchors>
+                        <Anchor point="BOTTOMRIGHT" relativeKey="$parent" relativePoint="BOTTOMRIGHT" x="-2" y="-2" />
+                    </Anchors>
+                </FontString>
+            </Layer>
         </Layers>
     </Frame>
 </Ui>
