@@ -35,4 +35,46 @@
             </Layer>
         </Layers>
     </Frame>
+    <Button name="LootyGenericButtonTemplate" virtual="true">
+        <Size x="80" y="32" />
+        <Layers>
+            <Layer level="BACKGROUND">
+                <Texture parentKey="Background" setAllPoints="true">
+                    <Size x="80" y="32" />
+                </Texture>
+            </Layer>
+            <Layer level="ARTWORK">
+                <Texture parentKey="Highlight" setAllPoints="true" hidden="true">
+                    <Size x="80" y="32" />
+                </Texture>
+            </Layer>
+            <Layer level="OVERLAY">
+                <FontString parentKey="Text" inherits="LootyFont" justifyH="LEFT" justifyV="MIDDLE">
+                    <Anchors>
+                        <Anchor point="LEFT" relativeTo="$parent.Text" relativePoint="LEFT" x="" />
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+        <Frames>
+            <Frame parentKey="HotkeyFrame">
+                <Size x="20" y="20" />
+                <Anchors>
+                    <Anchor point="LEFT" x="4.5" />
+                </Anchors>
+                <Layers>
+                    <Layer level="OVERLAY" frameLevel="1">
+                        <Texture parentKey="HotkeyBackdrop" setALlPoints="true" />
+                    </Layer>
+                    <Layer level="OVERLAY" frameLevel="2">
+                        <FontString parentKey="Hotkey" inherits="LootyFont" justifyH="CENTER" justifyV="MIDDLE">
+                            <Anchors>
+                                <Anchor point="CENTER" relativeTo="$parent.HotkeyBackdrop" relativePoint="CENTER" x="0" />
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+            </Frame>
+        </Frames>
+    </Button>
 </Ui>
