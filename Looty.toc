@@ -3,5 +3,8 @@
 ## Title: Looty
 ## Notes: Provites a new UI for looting window
 ## Author: Nethanos
-Looty.xml
-Looty.lua
+## SavedVariables: PlumberDB
+## IconTexture: Interface\AddOns\Looty\Art\PlumberLogo64
+Initialization.lua
+API.lua
+Looty_Main.lua
